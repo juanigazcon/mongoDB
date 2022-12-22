@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "639f985d113523a33c222c46"
+  },
+  "title": "Marquisse",
+  "price": 1230,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/marquisse.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c47"
+  },
+  "title": "Torta de Nuez",
+  "price": 1900,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-nuez.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c48"
+  },
+  "title": "Pavlova Clásica",
+  "price": 2015,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/pavlova-clasica.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c49"
+  },
+  "title": "Key Lemon Pie",
+  "price": 2548,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/key-lemon-pie.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c4a"
+  },
+  "title": "Tarta de Frutillas",
+  "price": 3333,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/tarta-frutilla.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c4b"
+  },
+  "title": "Chocotorta",
+  "price": 3978,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/chocotorta.jpg",
+  "stock": 100
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c4c"
+  },
+  "title": "Layer Cake",
+  "price": 4055,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/layer-cake.jpg",
+  "stock": 0
+},{
+  "_id": {
+    "$oid": "639f985d113523a33c222c4d"
+  },
+  "title": "Coquitos",
+  "price": 4888,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/coquitos.jpg",
+  "stock": 0
+},{
+  "_id": {
+    "$oid": "639f98df113523a33c222c58"
+  },
+  "title": "Brownies",
+  "price": 1500,
+  "url": "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/brownies.jpg",
+  "stock": 100
+}]

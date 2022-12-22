@@ -1,0 +1,111 @@
+[{
+  "_id": {
+    "$oid": "639f9887113523a33c222c4e"
+  },
+  "email": "juana@gmail.com",
+  "message": "Hola!",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655664"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c4f"
+  },
+  "email": "diego@gmail.com",
+  "message": "Cómo estás?",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c50"
+  },
+  "email": "juana@gmail.com",
+  "message": "Todo bien y vos?",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c51"
+  },
+  "email": "diego@gmail.com",
+  "message": "Bien, contento con el triunfo de Argentina!",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c52"
+  },
+  "email": "juana@gmail.com",
+  "message": "Sí yo igual!",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c53"
+  },
+  "email": "pedro@gmail.com",
+  "message": "Buenas!",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c54"
+  },
+  "email": "diego@gmail.com",
+  "message": "Hola Pedro, cómo estás?",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c55"
+  },
+  "email": "pedro@gmail.com",
+  "message": "Muy bien por suerte",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c56"
+  },
+  "email": "juana@gmail.com",
+  "message": "Me voy chicos",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "639f9887113523a33c222c57"
+  },
+  "email": "diego@gmail.com",
+  "message": "Adios!",
+  "currentDate": {
+    "$date": {
+      "$numberLong": "1671403655665"
+    }
+  }
+}]

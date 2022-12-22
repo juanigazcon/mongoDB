@@ -1,0 +1,479 @@
+Microsoft Windows [Version 10.0.22000.1335]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\juana.gazcon>mongosh
+Current Mongosh Log ID: 639f97f9325be595966fd7f0
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1
+Using MongoDB:          6.0.3
+Using Mongosh:          1.6.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-12-18T18:55:53.045-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> use ecommerce
+switched to db ecommerce
+ecommerce> db.createCollection("Mensajes")
+{ ok: 1 }
+ecommerce> db.createCollection("Productos")
+{ ok: 1 }
+ecommerce> db.Productos.insert([{title: "Cheesecake tipo NY", price: 380 , url: "https://juanigazcon.github.io/totus-pasecommerce> db.Productos.insert([{title: "Cheesecake tipo NY", price: 380 , url: "https://juanigazcon.github.io/totus-pasecommerce> db.Productos.insert([{title: "Cheesecake tipo NY", price: 380 , url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/cheesecake.jpg"}, {title: "Rogel" , price: 890, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-rogel.jpg"}, {title: "Marquisse" , price: 1230, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/marquisse.jpg"}, {title: "Torta de Nuez" , price: 1900 , url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-nuez.jpg"}, {title: "Pavlova Clásica", price: 2015 , url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/pavlova-clasica.jpg"}, {title: "Key Lemon Pie", price: 2548, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/key-lemon-pie.jpg"}, {title: "Tarta de Frutillas", price: 3333, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/tarta-frutilla.jpg"}, {title: "Chocotorta", price: 3978, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/chocotorta.jpg"}, {title: "Layer Cake", price: 4055, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/layer-cake.jpg"}, {title: "Coquitos", pricprice: 4888, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/coquitos.jpg"}])
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("639f985d113523a33c222c44"),
+    '1': ObjectId("639f985d113523a33c222c45"),
+    '2': ObjectId("639f985d113523a33c222c46"),
+    '3': ObjectId("639f985d113523a33c222c47"),
+    '4': ObjectId("639f985d113523a33c222c48"),
+    '5': ObjectId("639f985d113523a33c222c49"),
+    '6': ObjectId("639f985d113523a33c222c4a"),
+    '7': ObjectId("639f985d113523a33c222c4b"),
+    '8': ObjectId("639f985d113523a33c222c4c"),
+    '9': ObjectId("639f985d113523a33c222c4d")
+  }
+}
+ecommerce> db.Mensajes.insert([{email: "juana@gmail.com" , message: "Hola!" , currentDate: ISODate()}, {email: "diego@gmecommerce> db.Mensajes.insert([{email: "juana@gmail.com" , message: "Hola!" , currentDate: ISODate()}, {email: "diego@gmail.com" , message: "Cómo estás?" , currentDate: ISODate()}, {email: "juana@gmail.com" , message: "Todo bien y vos?" , currentDate: ISODate()}, {email: "diego@gmail.com" , message: "Bien, contento con el triunfo de Argentina!", currentDate: ISODate()}, {email: "juana@gmail.com", message: "Sí yo igual!", currentDate: ISODate()}, {email: "pedro@gmail.com", message: "Buenas!", currentDate: ISODate()}, {email: "diego@gmail.com", message: "Hola Pedro, cómo estás?", currentDate: ISODate()}, {email: "pedro@gmail.com", message: "Muy bien por suerte", currentDate: ISODate()}, {email: "juana@gmail.com" , message: "Me voy chicos", currentDate: ISODate()}, {email: "diego@gmail.com" , message: "Adios!", currentDate: ISODate()}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("639f9887113523a33c222c4e"),
+    '1': ObjectId("639f9887113523a33c222c4f"),
+    '2': ObjectId("639f9887113523a33c222c50"),
+    '3': ObjectId("639f9887113523a33c222c51"),
+    '4': ObjectId("639f9887113523a33c222c52"),
+    '5': ObjectId("639f9887113523a33c222c53"),
+    '6': ObjectId("639f9887113523a33c222c54"),
+    '7': ObjectId("639f9887113523a33c222c55"),
+    '8': ObjectId("639f9887113523a33c222c56"),
+    '9': ObjectId("639f9887113523a33c222c57")
+  }
+}
+ecommerce> db.Productos.find()
+[
+  {
+    _id: ObjectId("639f985d113523a33c222c44"),
+    title: 'Cheesecake tipo NY',
+    price: 380,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/cheesecake.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c45"),
+    title: 'Rogel',
+    price: 890,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-rogel.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c46"),
+    title: 'Marquisse',
+    price: 1230,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/marquisse.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c47"),
+    title: 'Torta de Nuez',
+    price: 1900,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-nuez.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c48"),
+    title: 'Pavlova Clásica',
+    price: 2015,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/pavlova-clasica.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c49"),
+    title: 'Key Lemon Pie',
+    price: 2548,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/key-lemon-pie.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4a"),
+    title: 'Tarta de Frutillas',
+    price: 3333,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/tarta-frutilla.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4b"),
+    title: 'Chocotorta',
+    price: 3978,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/chocotorta.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4c"),
+    title: 'Layer Cake',
+    price: 4055,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/layer-cake.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4d"),
+    title: 'Coquitos',
+    price: 4888,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/coquitos.jpg'
+  }
+]
+ecommerce> db.Mensajes.find()
+[
+  {
+    _id: ObjectId("639f9887113523a33c222c4e"),
+    email: 'juana@gmail.com',
+    message: 'Hola!',
+    currentDate: ISODate("2022-12-18T22:47:35.664Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c4f"),
+    email: 'diego@gmail.com',
+    message: 'Cómo estás?',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c50"),
+    email: 'juana@gmail.com',
+    message: 'Todo bien y vos?',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c51"),
+    email: 'diego@gmail.com',
+    message: 'Bien, contento con el triunfo de Argentina!',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c52"),
+    email: 'juana@gmail.com',
+    message: 'Sí yo igual!',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c53"),
+    email: 'pedro@gmail.com',
+    message: 'Buenas!',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c54"),
+    email: 'diego@gmail.com',
+    message: 'Hola Pedro, cómo estás?',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c55"),
+    email: 'pedro@gmail.com',
+    message: 'Muy bien por suerte',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c56"),
+    email: 'juana@gmail.com',
+    message: 'Me voy chicos',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  },
+  {
+    _id: ObjectId("639f9887113523a33c222c57"),
+    email: 'diego@gmail.com',
+    message: 'Adios!',
+    currentDate: ISODate("2022-12-18T22:47:35.665Z")
+  }
+]
+ecommerce> db.Productos.estimatedDocumentCount()
+10
+ecommerce> db.Mensajes.estimatedDocumentCount()
+10
+ecommerce> db.Productos.insertOne({title: "Brownies", price: 1500, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/brownies.jpg"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("639f98df113523a33c222c58")
+}
+ecommerce> db.Productos.find({"price": {$lt: 1000}})
+[
+  {
+    _id: ObjectId("639f985d113523a33c222c44"),
+    title: 'Cheesecake tipo NY',
+    price: 380,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/cheesecake.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c45"),
+    title: 'Rogel',
+    price: 890,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-rogel.jpg'
+  }
+]
+ecommerce> db.Productos.find({"price": {$gt: 1000, $lt:3000}})
+[
+  {
+    _id: ObjectId("639f985d113523a33c222c46"),
+    title: 'Marquisse',
+    price: 1230,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/marquisse.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c47"),
+    title: 'Torta de Nuez',
+    price: 1900,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-nuez.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c48"),
+    title: 'Pavlova Clásica',
+    price: 2015,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/pavlova-clasica.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c49"),
+    title: 'Key Lemon Pie',
+    price: 2548,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/key-lemon-pie.jpg'
+  },
+  {
+    _id: ObjectId("639f98df113523a33c222c58"),
+    title: 'Brownies',
+    price: 1500,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/brownies.jpg'
+  }
+]
+ecommerce> db.Productos.find({"price": {$gt: 3000}})
+[
+  {
+    _id: ObjectId("639f985d113523a33c222c4a"),
+    title: 'Tarta de Frutillas',
+    price: 3333,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/tarta-frutilla.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4b"),
+    title: 'Chocotorta',
+    price: 3978,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/chocotorta.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4c"),
+    title: 'Layer Cake',
+    price: 4055,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/layer-cake.jpg'
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4d"),
+    title: 'Coquitos',
+    price: 4888,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/coquitos.jpg'
+  }
+]
+ecommerce> db.Productos.find({}, {"title":1, "_id":0}).skip(2).limit(1).sort({price: 1})
+[ { title: 'Marquisse' } ]
+ecommerce> db.Productos.updateMany({stock: {$exists: false}}, {$set: {stock: 100}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 11,
+  modifiedCount: 11,
+  upsertedCount: 0
+}
+ecommerce> db.Productos.find()
+[
+  {
+    _id: ObjectId("639f985d113523a33c222c44"),
+    title: 'Cheesecake tipo NY',
+    price: 380,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/cheesecake.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c45"),
+    title: 'Rogel',
+    price: 890,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-rogel.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c46"),
+    title: 'Marquisse',
+    price: 1230,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/marquisse.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c47"),
+    title: 'Torta de Nuez',
+    price: 1900,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-nuez.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c48"),
+    title: 'Pavlova Clásica',
+    price: 2015,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/pavlova-clasica.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c49"),
+    title: 'Key Lemon Pie',
+    price: 2548,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/key-lemon-pie.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4a"),
+    title: 'Tarta de Frutillas',
+    price: 3333,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/tarta-frutilla.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4b"),
+    title: 'Chocotorta',
+    price: 3978,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/chocotorta.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4c"),
+    title: 'Layer Cake',
+    price: 4055,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/layer-cake.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4d"),
+    title: 'Coquitos',
+    price: 4888,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/coquitos.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f98df113523a33c222c58"),
+    title: 'Brownies',
+    price: 1500,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/brownies.jpg',
+    stock: 100
+  }
+]
+ecommerce> db.Productos.updateMany({price: {$gt: 4000}}, {$set: {stock:0}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+ecommerce> db.Productos.find()
+[
+  {
+    _id: ObjectId("639f985d113523a33c222c44"),
+    title: 'Cheesecake tipo NY',
+    price: 380,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/cheesecake.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c45"),
+    title: 'Rogel',
+    price: 890,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-rogel.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c46"),
+    title: 'Marquisse',
+    price: 1230,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/marquisse.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c47"),
+    title: 'Torta de Nuez',
+    price: 1900,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/torta-nuez.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c48"),
+    title: 'Pavlova Clásica',
+    price: 2015,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/pavlova-clasica.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c49"),
+    title: 'Key Lemon Pie',
+    price: 2548,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/key-lemon-pie.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4a"),
+    title: 'Tarta de Frutillas',
+    price: 3333,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/tarta-frutilla.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4b"),
+    title: 'Chocotorta',
+    price: 3978,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/chocotorta.jpg',
+    stock: 100
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4c"),
+    title: 'Layer Cake',
+    price: 4055,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/layer-cake.jpg',
+    stock: 0
+  },
+  {
+    _id: ObjectId("639f985d113523a33c222c4d"),
+    title: 'Coquitos',
+    price: 4888,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/coquitos.jpg',
+    stock: 0
+  },
+  {
+    _id: ObjectId("639f98df113523a33c222c58"),
+    title: 'Brownies',
+    price: 1500,
+    url: 'https://juanigazcon.github.io/totus-pasteleria/Images/Productos/brownies.jpg',
+    stock: 100
+  }
+]
+ecommerce> db.Productos.deleteMany({price: {$lt: 1000}})
+{ acknowledged: true, deletedCount: 2 }
+ecommerce> use admin
+switched to db admin
+admin>
+admin> db.createUser({user: "pepe", pwd: "asd456", roles: [ { role: "read", db: "ecommerce"}]})
+{ ok: 1 }
+C:\Users\juana.gazcon>mongosh -u pepe
+Enter password: ******
+Current Mongosh Log ID: 639fa11840229639fc360004
+Connecting to:          mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.1
+Using MongoDB:          6.0.3
+Using Mongosh:          1.6.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+test> use ecommerce
+switched to db ecommerce
+ecommerce> show collections
+Mensajes
+Productos
+ecommerce> db.Productos.insertOne({title: "Havanet Blanco", price: 5000, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/havannet-blanco.jpg"})
+MongoServerError: not authorized on ecommerce to execute command { insert: "Productos", documents: [ { title: "Havanet Blanco", price: 5000, url: "https://juanigazcon.github.io/totus-pasteleria/Images/Productos/havannet-blanco.jpg", _id: ObjectId('639fa15a1723ec92e5f2f5ec') } ], ordered: true, lsid: { id: UUID("68b1eb83-46d4-41bd-ab37-19b385ebf836") }, $db: "ecommerce" }
+ecommerce>
